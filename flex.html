@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style type="text/css">
+        body {background-color: black}
+        #flex-box1,
+        #flex-box2,
+        #flex-box3,
+        #flex-box4,
+        #flex-box5,
+        #flex-box6 {
+            display: flex;
+            width: 60px;
+            height: 60px;
+            background-color: snow;
+            border-top: 3px solid white;
+            border-left: 3px solid whitesmoke;
+            border-right: 3px solid whitesmoke;
+            border-bottom: 3px solid gainsboro;
+            padding: 5px;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .dot {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            border-radius: 8px;
+            -webkit-border-radius: 8px;
+            -moz-border-radius: 8px;
+            background-color: black;
+        }
+        #flex-box1 {
+            justify-content: center;
+            align-items: center;
+        }
+        #flex-box2,
+        #flex-box3 {
+            justify-content: space-between;
+        }
+        #flex-box2 .dot+.dot {
+            align-self: flex-end;
+        }
+        #flex-box3 .dot+.dot {
+            flex-direction: column;
+            align-self: center;
+        }
+        #flex-box3 .dot+.dot+.dot {
+            align-self: flex-end;
+        }
+        #flex-box4 {
+            flex-flow: column;
+            justify-content: space-between;
+        }
+        .flex_row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #flex-box5 {
+            flex-flow: column;
+            justify-content: space-between;
+        }
+        #flex-box5 .flex_row:nth-child(2) {
+            justify-content: center;
+        }
+        
+        #flex-box6 {
+            flex-flow: column;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+
+
+<div id="flex-box1">
+    <span class="dot"></span>
+</div>
+
+<div id="flex-box2">
+    <span class="dot"></span>    <span class="dot"></span>
+
+</div>
+
+<div id="flex-box3">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+
+</div>
+
+<div id="flex-box4">
+    <div class="flex_row">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    </div>
+    <div class="flex_row">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    </div>
+</div>
+
+<div id="flex-box5">
+    <div class="flex_row">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    </div>
+    <div class="flex_row">
+    <span class="dot"></span>
+    </div>
+    <div class="flex_row">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    </div>
+</div>
+
+<div id="flex-box6">
+    <div class="flex_row">
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class="flex_row">
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+    <div class="flex_row">
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+</div>
+</body>
+</html>
